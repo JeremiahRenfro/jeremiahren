@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+       <title>O'malley's Pub</title>
+       <link rel="stylesheet" href="global.css"/>
+	   <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+	<script>
+   
+<!----- JQUERY FOR SLIDING NAVIGATION --->   
+$(document).ready(function() {
+  $('a[href*=#]').each(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+    && location.hostname == this.hostname
+    && this.hash.replace(/#/,'') ) {
+      var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+      var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+       if ($target) {
+         var targetOffset = $target.offset().top;
+
+<!----- JQUERY CLICK FUNCTION REMOVE AND ADD CLASS "ACTIVE" + SCROLL TO THE #DIV--->   
+         $(this).click(function() {
+            $("#nav li a").removeClass("active");
+            $(this).addClass('active');
+           $('html, body').animate({scrollTop: targetOffset}, 1000);
+           return false;
+         });
+      }
+    }
+  });
+
+});
+
+
+</script>
+
+
+</head> 
+	
+<body>
+
+<!----- HEADER START--->   
+<header id="header">
+<div class="content">
+<div id="logo"><a href="">O'malley's Pub</a></div>
+
+<nav id="nav">
+	<ul>
+		<li><a href="#slide1" class="active" title="Next Section" >Home</a></li>
+		<li><a href="#slide2" title="Next Section">About</a></li>
+		<li><a href="#slide3" title="Next Section">Menu</a></li>
+		<li><a  href="#slide4" title="Next Section">Visit</a></li>
+
+	</ul>
+</nav>
+</div>
+</header>	
+<!----- HEADER END--->   
+
+<!----- SLIDES START --->   	
+	<div id="slide1">
+		<div class="content">
+            <h2>WELCOME T0</h2>
+		    <h1>O'MALLEY'S IRISH PUB</h1>
+		     <h3>BEERS FOR ALL</h3>
+		</div> 
+    </div> 
+
+	<div id="slide2">
+		<div class="content">
+		    <h3>An Irish Pub for all featuring all kinds of beers and Irish foods for everyone to enjoy</h3>
+			<h4>There's no Irish Pub quite like this in the US, so come on over! If you're still curious, check out our menu!</h4>
+		</div> 
+    </div> 
+	
+	
+   <div id="slide3">
+		<div class="content"><h1> Food For All, Beers For Mature </h1>
+		  <div class="menu"> 
+		 <h3> Irish stew </h3> <h4>A delicious stew made with the mix of mutton with mashed potatoes, onions, carrots, and herbs</h4>  <h3> Soups and chowders </h3> 
+		 <h4>Be ready to chow down on this soup.</h4>  <h3> Fish-and-chips </h3> 
+		 <h4>An unluckily combination that just works swimmingly.</h4> </div>
+         <div class="menu"> 
+		  <h3>Collar and cabbage</h3> <h4> Made from boiled bacon coated in bread crumbs and brown sugar, then baked and served with cabbage.</h4>    <h3>Braised Rabbit Pie</h3> 
+		 <h4>An amazing traditional pie recipe for the Irish culture.</h4>   <h3>Irish Potato Pancakes</h3> 
+		 <h4>Very fresh and soft pancakes fitting for early mornings.</h4>  </div>
+	 </div> 
+</div> 
+	
+		
+	
+	<div id="slide4">
+		<div class="content">
+		    <h3>If you wish to find each of the Pubs, we have them at every state of the US! Just drive around and you'll find one of ours eventually.</h3>
+		  </div> 
+		</div> 
+		
+
+    </div> 
+	
+	
+<!----- SLIDES END --->
+
+</body>
+</html>
